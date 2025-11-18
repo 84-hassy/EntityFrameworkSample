@@ -39,12 +39,14 @@
             this.ProductPriceLabel = new System.Windows.Forms.Label();
             this.InsertCommandButton = new System.Windows.Forms.Button();
             this.UpdateCommandButton = new System.Windows.Forms.Button();
+            this.UpsertCommandButton = new System.Windows.Forms.Button();
+            this.DeleteCommandButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // DataTableReadButton
             // 
-            this.DataTableReadButton.Location = new System.Drawing.Point(12, 12);
+            this.DataTableReadButton.Location = new System.Drawing.Point(12, 116);
             this.DataTableReadButton.Name = "DataTableReadButton";
             this.DataTableReadButton.Size = new System.Drawing.Size(239, 47);
             this.DataTableReadButton.TabIndex = 0;
@@ -64,7 +66,7 @@
             // 
             // ReaderReadButton
             // 
-            this.ReaderReadButton.Location = new System.Drawing.Point(12, 75);
+            this.ReaderReadButton.Location = new System.Drawing.Point(12, 178);
             this.ReaderReadButton.Name = "ReaderReadButton";
             this.ReaderReadButton.Size = new System.Drawing.Size(239, 47);
             this.ReaderReadButton.TabIndex = 2;
@@ -122,7 +124,7 @@
             // 
             // InsertCommandButton
             // 
-            this.InsertCommandButton.Location = new System.Drawing.Point(25, 240);
+            this.InsertCommandButton.Location = new System.Drawing.Point(23, 302);
             this.InsertCommandButton.Name = "InsertCommandButton";
             this.InsertCommandButton.Size = new System.Drawing.Size(212, 42);
             this.InsertCommandButton.TabIndex = 9;
@@ -132,7 +134,7 @@
             // 
             // UpdateCommandButton
             // 
-            this.UpdateCommandButton.Location = new System.Drawing.Point(25, 298);
+            this.UpdateCommandButton.Location = new System.Drawing.Point(23, 360);
             this.UpdateCommandButton.Name = "UpdateCommandButton";
             this.UpdateCommandButton.Size = new System.Drawing.Size(212, 39);
             this.UpdateCommandButton.TabIndex = 10;
@@ -140,11 +142,33 @@
             this.UpdateCommandButton.UseVisualStyleBackColor = true;
             this.UpdateCommandButton.Click += new System.EventHandler(this.UpdateCommandButton_Click);
             // 
+            // UpsertCommandButton
+            // 
+            this.UpsertCommandButton.Location = new System.Drawing.Point(23, 405);
+            this.UpsertCommandButton.Name = "UpsertCommandButton";
+            this.UpsertCommandButton.Size = new System.Drawing.Size(212, 39);
+            this.UpsertCommandButton.TabIndex = 11;
+            this.UpsertCommandButton.Text = "UpsertCommandButton";
+            this.UpsertCommandButton.UseVisualStyleBackColor = true;
+            this.UpsertCommandButton.Click += new System.EventHandler(this.UpsertCommandButton_Click);
+            // 
+            // DeleteCommandButton
+            // 
+            this.DeleteCommandButton.Location = new System.Drawing.Point(23, 450);
+            this.DeleteCommandButton.Name = "DeleteCommandButton";
+            this.DeleteCommandButton.Size = new System.Drawing.Size(212, 39);
+            this.DeleteCommandButton.TabIndex = 12;
+            this.DeleteCommandButton.Text = "DeleteCommandButton";
+            this.DeleteCommandButton.UseVisualStyleBackColor = true;
+            this.DeleteCommandButton.Click += new System.EventHandler(this.DeleteCommandButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1020, 501);
+            this.Controls.Add(this.DeleteCommandButton);
+            this.Controls.Add(this.UpsertCommandButton);
             this.Controls.Add(this.UpdateCommandButton);
             this.Controls.Add(this.InsertCommandButton);
             this.Controls.Add(this.ProductPriceLabel);
@@ -177,6 +201,8 @@
         private System.Windows.Forms.Label ProductPriceLabel;
         private System.Windows.Forms.Button InsertCommandButton;
         private System.Windows.Forms.Button UpdateCommandButton;
+        private System.Windows.Forms.Button UpsertCommandButton;
+        private System.Windows.Forms.Button DeleteCommandButton;
     }
 }
 

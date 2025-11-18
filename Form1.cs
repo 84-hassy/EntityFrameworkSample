@@ -49,5 +49,21 @@ namespace EntityFrameworkDBConnectionSample
             var entity = new ProductEntity(productId, productName, productPrice);
             ProductsSqlServer.Update(entity);
         }
+
+        private void UpsertCommandButton_Click(object sender, EventArgs e)
+        {
+            int productId = int.Parse(ProductIdTextBox.Text);
+            string productName = ProductNameTextBox.Text;
+            int productPrice = int.Parse(ProductPriceTextBox.Text);
+
+            var entity = new ProductEntity(productId, productName, productPrice);
+            ProductsSqlServer.Upsert(entity);
+        }
+
+        private void DeleteCommandButton_Click(object sender, EventArgs e)
+        {
+            int productId = int.Parse(ProductIdTextBox.Text);
+            ProductsSqlServer.Delete(productId);
+        }
     }
 }

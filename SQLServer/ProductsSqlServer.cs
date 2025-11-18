@@ -117,5 +117,44 @@ namespace EntityFrameworkDBConnectionSample.SQLServer
                 command.ExecuteNonQuery();
             }
         }
+
+        public static void Upsert(ProductEntity product)
+        {
+            string sql = @"UPDATE products SET name=@name , price=@price WHERE id =@id";
+
+            // SQL Connection はDisposeメソッドが存在
+            // そのため、usingステートメントを使用して確実に解放する
+            using (var connection = new SqlConnection(_connectionString))
+            using (var command = new SqlCommand(sql, connection))
+            {
+                connection.Open();
+                command.Parameters.AddWithValue("@id", product.Id);
+                command.Parameters.AddWithValue("@name", product.Name);
+                command.Parameters.AddWithValue("@price", product.Price);
+                var updateCount = command.ExecuteNonQuery();
+
+                // 更新件数が0件の場合は、INSERTを実行
+                if (updateCount == 0)
+                {
+                    Insert(product);
+                }
+            }
+        }
+
+
+        public static void Delete(int id)
+        {
+            string sql = @"DELETE FROM products WHERE id =@id";
+
+            // SQL Connection はDisposeメソッドが存在
+            // そのため、usingステートメントを使用して確実に解放する
+            using (var connection = new SqlConnection(_connectionString))
+            using (var command = new SqlCommand(sql, connection))
+            {
+                connection.Open();
+                command.Parameters.AddWithValue("@id", id);
+                var updateCount = command.ExecuteNonQuery();
+            }
+        }
     }
 }
