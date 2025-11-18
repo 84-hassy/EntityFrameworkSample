@@ -82,5 +82,22 @@ namespace EntityFrameworkDBConnectionSample.SQLServer
             return result;
         }
 
+
+        public static void Insert(ProductEntity product)
+        {
+            string sql = @"INSERT INTO products (id , name, price) VALUES (@id , @name, @price)";
+
+            // SQL Connection はDisposeメソッドが存在
+            // そのため、usingステートメントを使用して確実に解放する
+            using (var connection = new SqlConnection(_connectionString))
+            using (var command = new SqlCommand(sql, connection))
+            {
+                connection.Open();
+                command.Parameters.AddWithValue("@id",product.Id);
+                command.Parameters.AddWithValue("@name", product.Name);
+                command.Parameters.AddWithValue("@price", product.Price);
+                command.ExecuteNonQuery();
+            }
+        }
     }
 }

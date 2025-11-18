@@ -31,6 +31,13 @@
             this.DataTableReadButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ReaderReadButton = new System.Windows.Forms.Button();
+            this.ProductIdTextBox = new System.Windows.Forms.TextBox();
+            this.ProductNameTextBox = new System.Windows.Forms.TextBox();
+            this.ProductPriceTextBox = new System.Windows.Forms.TextBox();
+            this.ProductIdLabel = new System.Windows.Forms.Label();
+            this.ProductNameLabel = new System.Windows.Forms.Label();
+            this.ProductPriceLabel = new System.Windows.Forms.Label();
+            this.InsertCommandButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,11 +54,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(272, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(272, 113);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(736, 486);
+            this.dataGridView1.Size = new System.Drawing.Size(736, 385);
             this.dataGridView1.TabIndex = 1;
             // 
             // ReaderReadButton
@@ -64,11 +71,76 @@
             this.ReaderReadButton.UseVisualStyleBackColor = true;
             this.ReaderReadButton.Click += new System.EventHandler(this.ReaderReadButton_Click);
             // 
+            // ProductIdTextBox
+            // 
+            this.ProductIdTextBox.Location = new System.Drawing.Point(333, 82);
+            this.ProductIdTextBox.Name = "ProductIdTextBox";
+            this.ProductIdTextBox.Size = new System.Drawing.Size(100, 25);
+            this.ProductIdTextBox.TabIndex = 3;
+            // 
+            // ProductNameTextBox
+            // 
+            this.ProductNameTextBox.Location = new System.Drawing.Point(508, 82);
+            this.ProductNameTextBox.Name = "ProductNameTextBox";
+            this.ProductNameTextBox.Size = new System.Drawing.Size(100, 25);
+            this.ProductNameTextBox.TabIndex = 4;
+            // 
+            // ProductPriceTextBox
+            // 
+            this.ProductPriceTextBox.Location = new System.Drawing.Point(747, 82);
+            this.ProductPriceTextBox.Name = "ProductPriceTextBox";
+            this.ProductPriceTextBox.Size = new System.Drawing.Size(100, 25);
+            this.ProductPriceTextBox.TabIndex = 5;
+            // 
+            // ProductIdLabel
+            // 
+            this.ProductIdLabel.AutoSize = true;
+            this.ProductIdLabel.Location = new System.Drawing.Point(313, 61);
+            this.ProductIdLabel.Name = "ProductIdLabel";
+            this.ProductIdLabel.Size = new System.Drawing.Size(80, 18);
+            this.ProductIdLabel.TabIndex = 6;
+            this.ProductIdLabel.Text = "ProductId";
+            // 
+            // ProductNameLabel
+            // 
+            this.ProductNameLabel.AutoSize = true;
+            this.ProductNameLabel.Location = new System.Drawing.Point(488, 61);
+            this.ProductNameLabel.Name = "ProductNameLabel";
+            this.ProductNameLabel.Size = new System.Drawing.Size(110, 18);
+            this.ProductNameLabel.TabIndex = 7;
+            this.ProductNameLabel.Text = "ProductName";
+            // 
+            // ProductPriceLabel
+            // 
+            this.ProductPriceLabel.AutoSize = true;
+            this.ProductPriceLabel.Location = new System.Drawing.Point(704, 61);
+            this.ProductPriceLabel.Name = "ProductPriceLabel";
+            this.ProductPriceLabel.Size = new System.Drawing.Size(106, 18);
+            this.ProductPriceLabel.TabIndex = 8;
+            this.ProductPriceLabel.Text = "ProductPrice";
+            // 
+            // InsertCommandButton
+            // 
+            this.InsertCommandButton.Location = new System.Drawing.Point(25, 240);
+            this.InsertCommandButton.Name = "InsertCommandButton";
+            this.InsertCommandButton.Size = new System.Drawing.Size(212, 42);
+            this.InsertCommandButton.TabIndex = 9;
+            this.InsertCommandButton.Text = "InsertCommandButton";
+            this.InsertCommandButton.UseVisualStyleBackColor = true;
+            this.InsertCommandButton.Click += new System.EventHandler(this.InsertCommandButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1020, 501);
+            this.Controls.Add(this.InsertCommandButton);
+            this.Controls.Add(this.ProductPriceLabel);
+            this.Controls.Add(this.ProductNameLabel);
+            this.Controls.Add(this.ProductIdLabel);
+            this.Controls.Add(this.ProductPriceTextBox);
+            this.Controls.Add(this.ProductNameTextBox);
+            this.Controls.Add(this.ProductIdTextBox);
             this.Controls.Add(this.ReaderReadButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.DataTableReadButton);
@@ -76,6 +148,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -84,6 +157,13 @@
         private System.Windows.Forms.Button DataTableReadButton;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button ReaderReadButton;
+        private System.Windows.Forms.TextBox ProductIdTextBox;
+        private System.Windows.Forms.TextBox ProductNameTextBox;
+        private System.Windows.Forms.TextBox ProductPriceTextBox;
+        private System.Windows.Forms.Label ProductIdLabel;
+        private System.Windows.Forms.Label ProductNameLabel;
+        private System.Windows.Forms.Label ProductPriceLabel;
+        private System.Windows.Forms.Button InsertCommandButton;
     }
 }
 
