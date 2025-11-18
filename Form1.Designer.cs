@@ -43,6 +43,8 @@
             this.DeleteCommandButton = new System.Windows.Forms.Button();
             this.DapperReadButton = new System.Windows.Forms.Button();
             this.DapperInsertButton = new System.Windows.Forms.Button();
+            this.DapperUpdateButton = new System.Windows.Forms.Button();
+            this.DapperDeleteButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,11 +186,33 @@
             this.DapperInsertButton.UseVisualStyleBackColor = true;
             this.DapperInsertButton.Click += new System.EventHandler(this.DapperInsertButton_Click);
             // 
+            // DapperUpdateButton
+            // 
+            this.DapperUpdateButton.Location = new System.Drawing.Point(29, 605);
+            this.DapperUpdateButton.Name = "DapperUpdateButton";
+            this.DapperUpdateButton.Size = new System.Drawing.Size(212, 39);
+            this.DapperUpdateButton.TabIndex = 15;
+            this.DapperUpdateButton.Text = "DapperUpdateButton";
+            this.DapperUpdateButton.UseVisualStyleBackColor = true;
+            this.DapperUpdateButton.Click += new System.EventHandler(this.DapperUpdateButton_Click);
+            // 
+            // DapperDeleteButton
+            // 
+            this.DapperDeleteButton.Location = new System.Drawing.Point(29, 650);
+            this.DapperDeleteButton.Name = "DapperDeleteButton";
+            this.DapperDeleteButton.Size = new System.Drawing.Size(212, 39);
+            this.DapperDeleteButton.TabIndex = 16;
+            this.DapperDeleteButton.Text = "DapperDeleteButton";
+            this.DapperDeleteButton.UseVisualStyleBackColor = true;
+            this.DapperDeleteButton.Click += new System.EventHandler(this.DapperDeleteButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1020, 701);
+            this.Controls.Add(this.DapperDeleteButton);
+            this.Controls.Add(this.DapperUpdateButton);
             this.Controls.Add(this.DapperInsertButton);
             this.Controls.Add(this.DapperReadButton);
             this.Controls.Add(this.DeleteCommandButton);
@@ -229,6 +253,8 @@
         private System.Windows.Forms.Button DeleteCommandButton;
         private System.Windows.Forms.Button DapperReadButton;
         private System.Windows.Forms.Button DapperInsertButton;
+        private System.Windows.Forms.Button DapperUpdateButton;
+        private System.Windows.Forms.Button DapperDeleteButton;
     }
 }
 

@@ -184,5 +184,29 @@ namespace EntityFrameworkDBConnectionSample.SQLServer
             }
         }
 
+        public static void DapperUpdate(ProductEntity product)
+        {
+            string sql = @"UPDATE products SET name=@name , price=@price WHERE id =@id";
+
+            // SQL Connection はDisposeメソッドが存在
+            // そのため、usingステートメントを使用して確実に解放する
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Execute(sql, new { id = product.Id, name = product.Name, price = product.Price });
+            }
+        }
+
+        public static void DapperDelete(int id)
+        {
+            string sql = @"DELETE FROM products WHERE id =@id";
+
+            // SQL Connection はDisposeメソッドが存在
+            // そのため、usingステートメントを使用して確実に解放する
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Execute(sql, new { id = id });
+            }
+        }
+
     }
 }
