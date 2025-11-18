@@ -38,6 +38,7 @@
             this.ProductNameLabel = new System.Windows.Forms.Label();
             this.ProductPriceLabel = new System.Windows.Forms.Label();
             this.InsertCommandButton = new System.Windows.Forms.Button();
+            this.UpdateCommandButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,11 +130,22 @@
             this.InsertCommandButton.UseVisualStyleBackColor = true;
             this.InsertCommandButton.Click += new System.EventHandler(this.InsertCommandButton_Click);
             // 
+            // UpdateCommandButton
+            // 
+            this.UpdateCommandButton.Location = new System.Drawing.Point(25, 298);
+            this.UpdateCommandButton.Name = "UpdateCommandButton";
+            this.UpdateCommandButton.Size = new System.Drawing.Size(212, 39);
+            this.UpdateCommandButton.TabIndex = 10;
+            this.UpdateCommandButton.Text = "UpdateCommandButton";
+            this.UpdateCommandButton.UseVisualStyleBackColor = true;
+            this.UpdateCommandButton.Click += new System.EventHandler(this.UpdateCommandButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1020, 501);
+            this.Controls.Add(this.UpdateCommandButton);
             this.Controls.Add(this.InsertCommandButton);
             this.Controls.Add(this.ProductPriceLabel);
             this.Controls.Add(this.ProductNameLabel);
@@ -164,6 +176,7 @@
         private System.Windows.Forms.Label ProductNameLabel;
         private System.Windows.Forms.Label ProductPriceLabel;
         private System.Windows.Forms.Button InsertCommandButton;
+        private System.Windows.Forms.Button UpdateCommandButton;
     }
 }
 

@@ -39,5 +39,15 @@ namespace EntityFrameworkDBConnectionSample
             var entity = new ProductEntity( productId, productName, productPrice);
             ProductsSqlServer.Insert(entity);
         }
+
+        private void UpdateCommandButton_Click(object sender, EventArgs e)
+        {
+            int productId = int.Parse(ProductIdTextBox.Text);
+            string productName = ProductNameTextBox.Text;
+            int productPrice = int.Parse(ProductPriceTextBox.Text);
+
+            var entity = new ProductEntity(productId, productName, productPrice);
+            ProductsSqlServer.Update(entity);
+        }
     }
 }
