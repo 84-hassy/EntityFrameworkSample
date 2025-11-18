@@ -45,14 +45,19 @@
             this.DapperInsertButton = new System.Windows.Forms.Button();
             this.DapperUpdateButton = new System.Windows.Forms.Button();
             this.DapperDeleteButton = new System.Windows.Forms.Button();
+            this.EFReadButton = new System.Windows.Forms.Button();
+            this.EFInsertButton = new System.Windows.Forms.Button();
+            this.EFUpdateButton = new System.Windows.Forms.Button();
+            this.EFDeleteButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // DataTableReadButton
             // 
-            this.DataTableReadButton.Location = new System.Drawing.Point(12, 116);
+            this.DataTableReadButton.Location = new System.Drawing.Point(7, 31);
+            this.DataTableReadButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DataTableReadButton.Name = "DataTableReadButton";
-            this.DataTableReadButton.Size = new System.Drawing.Size(239, 47);
+            this.DataTableReadButton.Size = new System.Drawing.Size(143, 31);
             this.DataTableReadButton.TabIndex = 0;
             this.DataTableReadButton.Text = "Data Table Read";
             this.DataTableReadButton.UseVisualStyleBackColor = true;
@@ -61,18 +66,20 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(272, 113);
+            this.dataGridView1.Location = new System.Drawing.Point(163, 75);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(736, 576);
+            this.dataGridView1.Size = new System.Drawing.Size(442, 384);
             this.dataGridView1.TabIndex = 1;
             // 
             // ReaderReadButton
             // 
-            this.ReaderReadButton.Location = new System.Drawing.Point(12, 178);
+            this.ReaderReadButton.Location = new System.Drawing.Point(7, 67);
+            this.ReaderReadButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ReaderReadButton.Name = "ReaderReadButton";
-            this.ReaderReadButton.Size = new System.Drawing.Size(239, 47);
+            this.ReaderReadButton.Size = new System.Drawing.Size(143, 31);
             this.ReaderReadButton.TabIndex = 2;
             this.ReaderReadButton.Text = "Reader Read";
             this.ReaderReadButton.UseVisualStyleBackColor = true;
@@ -80,57 +87,64 @@
             // 
             // ProductIdTextBox
             // 
-            this.ProductIdTextBox.Location = new System.Drawing.Point(333, 82);
+            this.ProductIdTextBox.Location = new System.Drawing.Point(200, 55);
+            this.ProductIdTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ProductIdTextBox.Name = "ProductIdTextBox";
-            this.ProductIdTextBox.Size = new System.Drawing.Size(100, 25);
+            this.ProductIdTextBox.Size = new System.Drawing.Size(62, 19);
             this.ProductIdTextBox.TabIndex = 3;
             // 
             // ProductNameTextBox
             // 
-            this.ProductNameTextBox.Location = new System.Drawing.Point(508, 82);
+            this.ProductNameTextBox.Location = new System.Drawing.Point(305, 55);
+            this.ProductNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ProductNameTextBox.Name = "ProductNameTextBox";
-            this.ProductNameTextBox.Size = new System.Drawing.Size(100, 25);
+            this.ProductNameTextBox.Size = new System.Drawing.Size(62, 19);
             this.ProductNameTextBox.TabIndex = 4;
             // 
             // ProductPriceTextBox
             // 
-            this.ProductPriceTextBox.Location = new System.Drawing.Point(747, 82);
+            this.ProductPriceTextBox.Location = new System.Drawing.Point(448, 55);
+            this.ProductPriceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ProductPriceTextBox.Name = "ProductPriceTextBox";
-            this.ProductPriceTextBox.Size = new System.Drawing.Size(100, 25);
+            this.ProductPriceTextBox.Size = new System.Drawing.Size(62, 19);
             this.ProductPriceTextBox.TabIndex = 5;
             // 
             // ProductIdLabel
             // 
             this.ProductIdLabel.AutoSize = true;
-            this.ProductIdLabel.Location = new System.Drawing.Point(313, 61);
+            this.ProductIdLabel.Location = new System.Drawing.Point(188, 41);
+            this.ProductIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProductIdLabel.Name = "ProductIdLabel";
-            this.ProductIdLabel.Size = new System.Drawing.Size(80, 18);
+            this.ProductIdLabel.Size = new System.Drawing.Size(53, 12);
             this.ProductIdLabel.TabIndex = 6;
             this.ProductIdLabel.Text = "ProductId";
             // 
             // ProductNameLabel
             // 
             this.ProductNameLabel.AutoSize = true;
-            this.ProductNameLabel.Location = new System.Drawing.Point(488, 61);
+            this.ProductNameLabel.Location = new System.Drawing.Point(293, 41);
+            this.ProductNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProductNameLabel.Name = "ProductNameLabel";
-            this.ProductNameLabel.Size = new System.Drawing.Size(110, 18);
+            this.ProductNameLabel.Size = new System.Drawing.Size(73, 12);
             this.ProductNameLabel.TabIndex = 7;
             this.ProductNameLabel.Text = "ProductName";
             // 
             // ProductPriceLabel
             // 
             this.ProductPriceLabel.AutoSize = true;
-            this.ProductPriceLabel.Location = new System.Drawing.Point(704, 61);
+            this.ProductPriceLabel.Location = new System.Drawing.Point(422, 41);
+            this.ProductPriceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProductPriceLabel.Name = "ProductPriceLabel";
-            this.ProductPriceLabel.Size = new System.Drawing.Size(106, 18);
+            this.ProductPriceLabel.Size = new System.Drawing.Size(70, 12);
             this.ProductPriceLabel.TabIndex = 8;
             this.ProductPriceLabel.Text = "ProductPrice";
             // 
             // InsertCommandButton
             // 
-            this.InsertCommandButton.Location = new System.Drawing.Point(29, 244);
+            this.InsertCommandButton.Location = new System.Drawing.Point(7, 114);
+            this.InsertCommandButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.InsertCommandButton.Name = "InsertCommandButton";
-            this.InsertCommandButton.Size = new System.Drawing.Size(212, 42);
+            this.InsertCommandButton.Size = new System.Drawing.Size(143, 22);
             this.InsertCommandButton.TabIndex = 9;
             this.InsertCommandButton.Text = "InsertCommandButton";
             this.InsertCommandButton.UseVisualStyleBackColor = true;
@@ -138,9 +152,10 @@
             // 
             // UpdateCommandButton
             // 
-            this.UpdateCommandButton.Location = new System.Drawing.Point(29, 302);
+            this.UpdateCommandButton.Location = new System.Drawing.Point(7, 140);
+            this.UpdateCommandButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UpdateCommandButton.Name = "UpdateCommandButton";
-            this.UpdateCommandButton.Size = new System.Drawing.Size(212, 39);
+            this.UpdateCommandButton.Size = new System.Drawing.Size(143, 20);
             this.UpdateCommandButton.TabIndex = 10;
             this.UpdateCommandButton.Text = "UpdateCommandButton";
             this.UpdateCommandButton.UseVisualStyleBackColor = true;
@@ -148,9 +163,10 @@
             // 
             // UpsertCommandButton
             // 
-            this.UpsertCommandButton.Location = new System.Drawing.Point(29, 347);
+            this.UpsertCommandButton.Location = new System.Drawing.Point(7, 164);
+            this.UpsertCommandButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UpsertCommandButton.Name = "UpsertCommandButton";
-            this.UpsertCommandButton.Size = new System.Drawing.Size(212, 39);
+            this.UpsertCommandButton.Size = new System.Drawing.Size(143, 20);
             this.UpsertCommandButton.TabIndex = 11;
             this.UpsertCommandButton.Text = "UpsertCommandButton";
             this.UpsertCommandButton.UseVisualStyleBackColor = true;
@@ -158,9 +174,10 @@
             // 
             // DeleteCommandButton
             // 
-            this.DeleteCommandButton.Location = new System.Drawing.Point(29, 392);
+            this.DeleteCommandButton.Location = new System.Drawing.Point(7, 188);
+            this.DeleteCommandButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DeleteCommandButton.Name = "DeleteCommandButton";
-            this.DeleteCommandButton.Size = new System.Drawing.Size(212, 39);
+            this.DeleteCommandButton.Size = new System.Drawing.Size(143, 20);
             this.DeleteCommandButton.TabIndex = 12;
             this.DeleteCommandButton.Text = "DeleteCommandButton";
             this.DeleteCommandButton.UseVisualStyleBackColor = true;
@@ -168,9 +185,10 @@
             // 
             // DapperReadButton
             // 
-            this.DapperReadButton.Location = new System.Drawing.Point(29, 515);
+            this.DapperReadButton.Location = new System.Drawing.Point(7, 243);
+            this.DapperReadButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DapperReadButton.Name = "DapperReadButton";
-            this.DapperReadButton.Size = new System.Drawing.Size(212, 39);
+            this.DapperReadButton.Size = new System.Drawing.Size(127, 23);
             this.DapperReadButton.TabIndex = 13;
             this.DapperReadButton.Text = "DapperReadButton";
             this.DapperReadButton.UseVisualStyleBackColor = true;
@@ -178,9 +196,10 @@
             // 
             // DapperInsertButton
             // 
-            this.DapperInsertButton.Location = new System.Drawing.Point(29, 560);
+            this.DapperInsertButton.Location = new System.Drawing.Point(7, 270);
+            this.DapperInsertButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DapperInsertButton.Name = "DapperInsertButton";
-            this.DapperInsertButton.Size = new System.Drawing.Size(212, 39);
+            this.DapperInsertButton.Size = new System.Drawing.Size(127, 23);
             this.DapperInsertButton.TabIndex = 14;
             this.DapperInsertButton.Text = "DapperInsertButton";
             this.DapperInsertButton.UseVisualStyleBackColor = true;
@@ -188,9 +207,10 @@
             // 
             // DapperUpdateButton
             // 
-            this.DapperUpdateButton.Location = new System.Drawing.Point(29, 605);
+            this.DapperUpdateButton.Location = new System.Drawing.Point(7, 297);
+            this.DapperUpdateButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DapperUpdateButton.Name = "DapperUpdateButton";
-            this.DapperUpdateButton.Size = new System.Drawing.Size(212, 39);
+            this.DapperUpdateButton.Size = new System.Drawing.Size(127, 23);
             this.DapperUpdateButton.TabIndex = 15;
             this.DapperUpdateButton.Text = "DapperUpdateButton";
             this.DapperUpdateButton.UseVisualStyleBackColor = true;
@@ -198,19 +218,68 @@
             // 
             // DapperDeleteButton
             // 
-            this.DapperDeleteButton.Location = new System.Drawing.Point(29, 650);
+            this.DapperDeleteButton.Location = new System.Drawing.Point(7, 324);
+            this.DapperDeleteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DapperDeleteButton.Name = "DapperDeleteButton";
-            this.DapperDeleteButton.Size = new System.Drawing.Size(212, 39);
+            this.DapperDeleteButton.Size = new System.Drawing.Size(127, 23);
             this.DapperDeleteButton.TabIndex = 16;
             this.DapperDeleteButton.Text = "DapperDeleteButton";
             this.DapperDeleteButton.UseVisualStyleBackColor = true;
             this.DapperDeleteButton.Click += new System.EventHandler(this.DapperDeleteButton_Click);
             // 
+            // EFReadButton
+            // 
+            this.EFReadButton.Location = new System.Drawing.Point(7, 361);
+            this.EFReadButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EFReadButton.Name = "EFReadButton";
+            this.EFReadButton.Size = new System.Drawing.Size(127, 19);
+            this.EFReadButton.TabIndex = 17;
+            this.EFReadButton.Text = "EFReadButton";
+            this.EFReadButton.UseVisualStyleBackColor = true;
+            this.EFReadButton.Click += new System.EventHandler(this.EFReadButton_Click);
+            // 
+            // EFInsertButton
+            // 
+            this.EFInsertButton.Location = new System.Drawing.Point(7, 384);
+            this.EFInsertButton.Margin = new System.Windows.Forms.Padding(2);
+            this.EFInsertButton.Name = "EFInsertButton";
+            this.EFInsertButton.Size = new System.Drawing.Size(127, 19);
+            this.EFInsertButton.TabIndex = 18;
+            this.EFInsertButton.Text = "EFInsertButton";
+            this.EFInsertButton.UseVisualStyleBackColor = true;
+            this.EFInsertButton.Click += new System.EventHandler(this.EFInsertButton_Click);
+            // 
+            // EFUpdateButton
+            // 
+            this.EFUpdateButton.Location = new System.Drawing.Point(7, 407);
+            this.EFUpdateButton.Margin = new System.Windows.Forms.Padding(2);
+            this.EFUpdateButton.Name = "EFUpdateButton";
+            this.EFUpdateButton.Size = new System.Drawing.Size(127, 19);
+            this.EFUpdateButton.TabIndex = 19;
+            this.EFUpdateButton.Text = "EFUpdateButton";
+            this.EFUpdateButton.UseVisualStyleBackColor = true;
+            this.EFUpdateButton.Click += new System.EventHandler(this.EFUpdateButton_Click);
+            // 
+            // EFDeleteButton
+            // 
+            this.EFDeleteButton.Location = new System.Drawing.Point(7, 430);
+            this.EFDeleteButton.Margin = new System.Windows.Forms.Padding(2);
+            this.EFDeleteButton.Name = "EFDeleteButton";
+            this.EFDeleteButton.Size = new System.Drawing.Size(127, 19);
+            this.EFDeleteButton.TabIndex = 20;
+            this.EFDeleteButton.Text = "EFDeleteButton";
+            this.EFDeleteButton.UseVisualStyleBackColor = true;
+            this.EFDeleteButton.Click += new System.EventHandler(this.EFDeleteButton_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 701);
+            this.ClientSize = new System.Drawing.Size(612, 467);
+            this.Controls.Add(this.EFDeleteButton);
+            this.Controls.Add(this.EFUpdateButton);
+            this.Controls.Add(this.EFInsertButton);
+            this.Controls.Add(this.EFReadButton);
             this.Controls.Add(this.DapperDeleteButton);
             this.Controls.Add(this.DapperUpdateButton);
             this.Controls.Add(this.DapperInsertButton);
@@ -228,6 +297,7 @@
             this.Controls.Add(this.ReaderReadButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.DataTableReadButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -255,6 +325,10 @@
         private System.Windows.Forms.Button DapperInsertButton;
         private System.Windows.Forms.Button DapperUpdateButton;
         private System.Windows.Forms.Button DapperDeleteButton;
+        private System.Windows.Forms.Button EFReadButton;
+        private System.Windows.Forms.Button EFInsertButton;
+        private System.Windows.Forms.Button EFUpdateButton;
+        private System.Windows.Forms.Button EFDeleteButton;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using EntityFrameworkDBConnectionSample.SQLServer;
+﻿using EntityFrameworkDBConnectionSample.Models;
+using EntityFrameworkDBConnectionSample.SQLServer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -95,6 +96,54 @@ namespace EntityFrameworkDBConnectionSample
         {
             int productId = int.Parse(ProductIdTextBox.Text);
             ProductsSqlServer.DapperDelete(productId);
+        }
+
+        private void EFReadButton_Click(object sender, EventArgs e)
+        {
+            var source = new List<products>();
+            using (var db = new DBContext())
+            {
+                source.AddRange(db.products);
+            }
+            
+            dataGridView1.DataSource = source;
+        }
+
+        private void EFInsertButton_Click(object sender, EventArgs e)
+        {
+            using (var db = new DBContext())
+            {
+
+
+                products p = new products();
+                p.id = int.Parse(ProductIdTextBox.Text);
+                p.name = ProductNameTextBox.Text;
+                p.price = int.Parse(ProductPriceTextBox.Text);
+
+                db.products.Add(p);
+                db.SaveChanges();
+            }
+        }
+
+        private void EFUpdateButton_Click(object sender, EventArgs e)
+        {
+            using (var db = new DBContext())
+            {
+                var p = db.products.Find(int.Parse(ProductIdTextBox.Text));
+                p.name = ProductNameTextBox.Text;
+                p.price = int.Parse(ProductPriceTextBox.Text);
+                db.SaveChanges();
+            }
+        }
+
+        private void EFDeleteButton_Click(object sender, EventArgs e)
+        {
+            using (var db = new DBContext())
+            {
+                var p = db.products.Find(int.Parse(ProductIdTextBox.Text));
+                db.products.Remove(p);
+                db.SaveChanges();
+            }
         }
     }
 }
