@@ -41,6 +41,8 @@
             this.UpdateCommandButton = new System.Windows.Forms.Button();
             this.UpsertCommandButton = new System.Windows.Forms.Button();
             this.DeleteCommandButton = new System.Windows.Forms.Button();
+            this.DapperReadButton = new System.Windows.Forms.Button();
+            this.DapperInsertButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +63,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(736, 385);
+            this.dataGridView1.Size = new System.Drawing.Size(736, 576);
             this.dataGridView1.TabIndex = 1;
             // 
             // ReaderReadButton
@@ -124,7 +126,7 @@
             // 
             // InsertCommandButton
             // 
-            this.InsertCommandButton.Location = new System.Drawing.Point(23, 302);
+            this.InsertCommandButton.Location = new System.Drawing.Point(29, 244);
             this.InsertCommandButton.Name = "InsertCommandButton";
             this.InsertCommandButton.Size = new System.Drawing.Size(212, 42);
             this.InsertCommandButton.TabIndex = 9;
@@ -134,7 +136,7 @@
             // 
             // UpdateCommandButton
             // 
-            this.UpdateCommandButton.Location = new System.Drawing.Point(23, 360);
+            this.UpdateCommandButton.Location = new System.Drawing.Point(29, 302);
             this.UpdateCommandButton.Name = "UpdateCommandButton";
             this.UpdateCommandButton.Size = new System.Drawing.Size(212, 39);
             this.UpdateCommandButton.TabIndex = 10;
@@ -144,7 +146,7 @@
             // 
             // UpsertCommandButton
             // 
-            this.UpsertCommandButton.Location = new System.Drawing.Point(23, 405);
+            this.UpsertCommandButton.Location = new System.Drawing.Point(29, 347);
             this.UpsertCommandButton.Name = "UpsertCommandButton";
             this.UpsertCommandButton.Size = new System.Drawing.Size(212, 39);
             this.UpsertCommandButton.TabIndex = 11;
@@ -154,7 +156,7 @@
             // 
             // DeleteCommandButton
             // 
-            this.DeleteCommandButton.Location = new System.Drawing.Point(23, 450);
+            this.DeleteCommandButton.Location = new System.Drawing.Point(29, 392);
             this.DeleteCommandButton.Name = "DeleteCommandButton";
             this.DeleteCommandButton.Size = new System.Drawing.Size(212, 39);
             this.DeleteCommandButton.TabIndex = 12;
@@ -162,11 +164,33 @@
             this.DeleteCommandButton.UseVisualStyleBackColor = true;
             this.DeleteCommandButton.Click += new System.EventHandler(this.DeleteCommandButton_Click);
             // 
+            // DapperReadButton
+            // 
+            this.DapperReadButton.Location = new System.Drawing.Point(29, 515);
+            this.DapperReadButton.Name = "DapperReadButton";
+            this.DapperReadButton.Size = new System.Drawing.Size(212, 39);
+            this.DapperReadButton.TabIndex = 13;
+            this.DapperReadButton.Text = "DapperReadButton";
+            this.DapperReadButton.UseVisualStyleBackColor = true;
+            this.DapperReadButton.Click += new System.EventHandler(this.DapperReadButton_Click);
+            // 
+            // DapperInsertButton
+            // 
+            this.DapperInsertButton.Location = new System.Drawing.Point(29, 560);
+            this.DapperInsertButton.Name = "DapperInsertButton";
+            this.DapperInsertButton.Size = new System.Drawing.Size(212, 39);
+            this.DapperInsertButton.TabIndex = 14;
+            this.DapperInsertButton.Text = "DapperInsertButton";
+            this.DapperInsertButton.UseVisualStyleBackColor = true;
+            this.DapperInsertButton.Click += new System.EventHandler(this.DapperInsertButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 501);
+            this.ClientSize = new System.Drawing.Size(1020, 701);
+            this.Controls.Add(this.DapperInsertButton);
+            this.Controls.Add(this.DapperReadButton);
             this.Controls.Add(this.DeleteCommandButton);
             this.Controls.Add(this.UpsertCommandButton);
             this.Controls.Add(this.UpdateCommandButton);
@@ -203,6 +227,8 @@
         private System.Windows.Forms.Button UpdateCommandButton;
         private System.Windows.Forms.Button UpsertCommandButton;
         private System.Windows.Forms.Button DeleteCommandButton;
+        private System.Windows.Forms.Button DapperReadButton;
+        private System.Windows.Forms.Button DapperInsertButton;
     }
 }
 

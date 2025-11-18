@@ -65,5 +65,20 @@ namespace EntityFrameworkDBConnectionSample
             int productId = int.Parse(ProductIdTextBox.Text);
             ProductsSqlServer.Delete(productId);
         }
+
+        private void DapperReadButton_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ProductsSqlServer.GetDapper();
+        }
+
+        private void DapperInsertButton_Click(object sender, EventArgs e)
+        {
+            int productId = int.Parse(ProductIdTextBox.Text);
+            string productName = ProductNameTextBox.Text;
+            int productPrice = int.Parse(ProductPriceTextBox.Text);
+
+            var entity = new ProductEntity(productId, productName, productPrice);
+            ProductsSqlServer.DapperInsert(entity);
+        }
     }
 }

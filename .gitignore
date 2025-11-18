@@ -5,4 +5,5 @@
 /.vs/
 /obj/
 /bin/Debug
-/bin/*.pdb
+/bin/*/*.pdb
+/packages/

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -156,5 +157,32 @@ namespace EntityFrameworkDBConnectionSample.SQLServer
                 var updateCount = command.ExecuteNonQuery();
             }
         }
+
+        public static List<ProductEntity> GetDapper()
+        {
+
+            // SQLクエリ
+            // Dapperでは、エイリアスを使用してプロパティ名と列名を一致させる必要がある
+            var sql = @"Select id as ProductId, name as ProductName, price as Price From products";
+
+            using (var connection = new SqlConnection(_connectionString))
+            {
+               return  connection.Query<ProductEntity>(sql).ToList();
+            }
+
+        }
+
+        public static void DapperInsert(ProductEntity product)
+        {
+            string sql = @"INSERT INTO products (id , name, price) VALUES (@id , @name, @price)";
+
+            // SQL Connection はDisposeメソッドが存在
+            // そのため、usingステートメントを使用して確実に解放する
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Execute(sql, new { id = product.Id, name = product.Name, price = product.Price });
+            }
+        }
+
     }
 }
